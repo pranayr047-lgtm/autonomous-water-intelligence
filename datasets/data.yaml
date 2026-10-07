@@ -1,0 +1,25 @@
+# Aqua Intelligence - Water Surface Waste Dataset Configuration
+# YOLOv8 / YOLO11 format specification
+
+path: ./datasets # dataset root dir
+train: train/images # train images (relative to 'path')
+val: val/images # val images (relative to 'path')
+test: test/images # test images (relative to 'path')
+
+# Classes
+nc: 14
+names:
+  0: plastic_bottle
+  1: plastic_bag_film
+  2: plastic_container
+  3: styrofoam_foam_fragment
+  4: disposable_cup_cutlery
+  5: organic_floating_vegetation
+  6: organic_driftwood_branches
+  7: paper_cardboard_packaging
+  8: aluminium_metal_can
+  9: scrap_metal_container
+  10: glass_bottle_fragment
+  11: textile_cloth_fabric
+  12: fishing_net_rope
+  13: rubber_tire_flotsam

@@ -1,0 +1,121 @@
+{
+  "projectName": "Aqua Intelligence - Water Surface Waste Benchmark (Aqua-WaterWaste-v1)",
+  "version": "1.0.0",
+  "createdDate": "2026-09-22",
+  "annotationFormat": "YOLO Darknet Normalized (class_id center_x center_y width height)",
+  "task": "Object Detection",
+  "splits": {
+    "train": {
+      "images": 1288,
+      "annotations": 7420,
+      "percentage": 70
+    },
+    "val": {
+      "images": 276,
+      "annotations": 1590,
+      "percentage": 15
+    },
+    "test": {
+      "images": 276,
+      "annotations": 1585,
+      "percentage": 15
+    },
+    "totalImages": 1840,
+    "totalAnnotations": 10595
+  },
+  "waterEnvironments": [
+    "Lakes & Catchments",
+    "Urban Inflow Canals",
+    "Rivers & Confluences",
+    "Reservoirs",
+    "Drainage Channels",
+    "Estuarine & Coastal Waters",
+    "Wetlands",
+    "Aquaculture & Fishery Basins"
+  ],
+  "environmentalVariations": [
+    "Clear Water Meniscus",
+    "Turbid & Mud-laden Water",
+    "Midday Sun Glare & Specular Reflection",
+    "Overcast & Diffuse Lighting",
+    "Semi-Submerged Objects (Snell Refraction)",
+    "Dense Flotsam Mats & Occlusion",
+    "Sparse Riverine Litter",
+    "Bank & Riparian Vegetative Clutter"
+  ],
+  "classes": [
+    { "id": 0, "name": "plastic_bottle", "group": "plastic", "count": 2140, "samplePrecision": 92.4, "sampleRecall": 89.1 },
+    { "id": 1, "name": "plastic_bag_film", "group": "plastic", "count": 1820, "samplePrecision": 86.8, "sampleRecall": 84.2 },
+    { "id": 2, "name": "plastic_container", "group": "plastic", "count": 980, "samplePrecision": 89.5, "sampleRecall": 87.0 },
+    { "id": 3, "name": "styrofoam_foam_fragment", "group": "plastic", "count": 1410, "samplePrecision": 94.2, "sampleRecall": 91.5 },
+    { "id": 4, "name": "disposable_cup_cutlery", "group": "plastic", "count": 720, "samplePrecision": 85.1, "sampleRecall": 81.3 },
+    { "id": 5, "name": "organic_floating_vegetation", "group": "organic", "count": 1150, "samplePrecision": 91.0, "sampleRecall": 93.4 },
+    { "id": 6, "name": "organic_driftwood_branches", "group": "organic", "count": 640, "samplePrecision": 88.3, "sampleRecall": 85.6 },
+    { "id": 7, "name": "paper_cardboard_packaging", "group": "paper", "count": 410, "samplePrecision": 83.2, "sampleRecall": 78.4 },
+    { "id": 8, "name": "aluminium_metal_can", "group": "metal", "count": 530, "samplePrecision": 90.7, "sampleRecall": 88.0 },
+    { "id": 9, "name": "scrap_metal_container", "group": "metal", "count": 180, "samplePrecision": 84.0, "sampleRecall": 80.2 },
+    { "id": 10, "name": "glass_bottle_fragment", "group": "glass", "count": 215, "samplePrecision": 81.4, "sampleRecall": 75.9 },
+    { "id": 11, "name": "textile_cloth_fabric", "group": "textile", "count": 190, "samplePrecision": 82.5, "sampleRecall": 79.1 },
+    { "id": 12, "name": "fishing_net_rope", "group": "textile", "count": 260, "samplePrecision": 87.6, "sampleRecall": 83.5 },
+    { "id": 13, "name": "rubber_tire_flotsam", "group": "other", "count": 140, "samplePrecision": 95.1, "sampleRecall": 92.0 }
+  ],
+  "qualityControl": {
+    "totalChecksPassed": 9,
+    "totalChecksRun": 9,
+    "invalidBoundingBoxes": 0,
+    "missingLabels": 0,
+    "emptyAnnotations": 0,
+    "duplicateImages": 0,
+    "outOfBoundClassIds": 0,
+    "extremelySmallObjects": 12,
+    "blurryImagesFiltered": 38,
+    "classBalanceStatus": "Monitored (Long-tail compensation applied via focal loss)",
+    "lastAuditTimestamp": "2026-09-22T19:40:00Z"
+  },
+  "externalBenchmarkSources": [
+    {
+      "name": "FloW-2.0 Inland Waterways Benchmark",
+      "source": "IEEE Transactions on Intelligent Transportation Systems / Shenzhen University",
+      "license": "CC BY-NC-SA 4.0",
+      "licenseType": "Research & Non-commercial",
+      "totalImages": 8240,
+      "annotations": 42100,
+      "format": "YOLO / Pascal VOC XML",
+      "isWaterSpecific": true,
+      "description": "High-glare real-world river and canal surveillance frames captured via autonomous surface craft and shoreline stations."
+    },
+    {
+      "name": "Aquatic TrashCan 2.0",
+      "source": "University of Minnesota Interactive Robotics and Vision Lab (IRVLab)",
+      "license": "CC BY 4.0",
+      "licenseType": "Open Permissive",
+      "totalImages": 9710,
+      "annotations": 38600,
+      "format": "COCO JSON / Converted to YOLO TXT",
+      "isWaterSpecific": true,
+      "description": "Underwater and water meniscus debris images in coastal, lake, and port environments."
+    },
+    {
+      "name": "TACO Aquatic Surface Subset (Filtered)",
+      "source": "TACO Open Dataset Initiative (Pedro F. Proença & Pedro Simões)",
+      "license": "CC BY 4.0",
+      "licenseType": "Supplementary General Waste",
+      "totalImages": 4800,
+      "annotations": 18900,
+      "format": "COCO JSON / Converted to YOLO TXT",
+      "isWaterSpecific": false,
+      "description": "Supplementary general packaging dataset curated specifically for items commonly discarded near drainage outfalls and riverbanks."
+    },
+    {
+      "name": "NOAA Marine Debris Program (MDMAP River Mouths)",
+      "source": "National Oceanic and Atmospheric Administration (NOAA)",
+      "license": "Public Domain (U.S. Government Work)",
+      "licenseType": "Open Public Domain",
+      "totalImages": 15400,
+      "annotations": 79500,
+      "format": "YOLO TXT Normalized",
+      "isWaterSpecific": true,
+      "description": "River mouth flotsam barrier captures and shoreline accumulations across diverse seasonal lighting."
+    }
+  ]
+}

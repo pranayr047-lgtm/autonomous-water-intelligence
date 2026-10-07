@@ -1,0 +1,6 @@
+{
+  "name": "Aqua Intelligence",
+  "description": "Autonomous Water Intelligence & Decision Support System — AI-powered environmental monitoring, computer-vision waste detection, and ecological risk analysis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
